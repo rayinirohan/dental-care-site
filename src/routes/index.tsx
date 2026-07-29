@@ -1,24 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Bahavathi Dental | Dental Clinic in Nizamabad" },
+      {
+        name: "description",
+        content:
+          "Bahavathi Dental in Nizamabad offers checkups, cleaning, root canal, implants, braces and whitening with modern equipment and compassionate care.",
+      },
+      { property: "og:title", content: "Bahavathi Dental | Dental Clinic in Nizamabad" },
+      {
+        property: "og:description",
+        content:
+          "Professional dental treatments with modern equipment and compassionate care in Nizamabad.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+// The site itself is plain HTML/CSS/JS in /public/site. This route just opens it.
 function Index() {
+  useEffect(() => {
+    window.location.replace("/site/index.html");
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <p className="text-sm text-muted-foreground">Loading Bahavathi Dental…</p>
     </div>
   );
 }
