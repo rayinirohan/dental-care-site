@@ -44,11 +44,14 @@ svg { width: 100%; height: 100%; fill: currentColor; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.25rem; color: var(--navy); min-width: 0; }
 .brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .brand-mark { width: 28px; height: 28px; color: var(--teal); flex: 0 0 auto; }
+.brand-logo { width: auto; height: 40px; flex: 0 0 auto; object-fit: contain; border-radius: 6px; }
+.footer-brand .brand-logo { height: 34px; }
 
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav > a { font-size: .95rem; font-weight: 500; color: var(--ink); position: relative; padding: 4px 0; }
 .nav > a:not(.nav-cta):hover { color: var(--teal); }
 .nav > a.active:not(.nav-cta) { color: var(--teal); }
+.nav > a.nav-cta { padding: 11px 22px; white-space: nowrap; line-height: 1; }
 .nav > a.active:not(.nav-cta)::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
   height: 2px; background: var(--teal); border-radius: 2px;
