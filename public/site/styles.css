@@ -173,7 +173,7 @@ svg { width: 100%; height: 100%; fill: currentColor; }
   .hero-grid { grid-template-columns: 1fr; padding: 44px 20px 56px; }
   .hero p { max-width: none; }
   .about-card { grid-template-columns: 1fr; }
-  .about-photo img { aspect-ratio: 4/3; }
+  .about-photo img { height: 320px; }
 }
 
 @media (max-width: 860px) {
