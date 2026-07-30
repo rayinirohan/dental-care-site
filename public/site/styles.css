@@ -1,14 +1,14 @@
 :root {
-  --teal: #109c8f;
-  --teal-dark: #0d8378;
-  --navy: #113a5c;
-  --ink: #17324a;
-  --muted: #5b7186;
+  --teal: #d92b2b;
+  --teal-dark: #2f2a86;
+  --navy: #2f2a86;
+  --ink: #221f47;
+  --muted: #6b6a8a;
   --bg: #ffffff;
-  --soft: #f2f9fa;
+  --soft: #fdf2f2;
   --card: #ffffff;
-  --border: #e3eef1;
-  --shadow: 0 10px 30px rgba(17, 58, 92, 0.07);
+  --border: #f0e3ea;
+  --shadow: 0 10px 30px rgba(47, 42, 134, 0.08);
   --radius: 14px;
   --maxw: 1140px;
 }
@@ -36,7 +36,7 @@ svg { width: 100%; height: 100%; fill: currentColor; }
   border-bottom: 1px solid transparent;
   transition: box-shadow .25s ease, border-color .25s ease;
 }
-.site-header.scrolled { box-shadow: 0 4px 20px rgba(17,58,92,.08); border-color: var(--border); }
+.site-header.scrolled { box-shadow: 0 4px 20px rgba(47,42,134,.10); border-color: var(--border); }
 .header-inner {
   display: grid; grid-template-columns: minmax(0,1fr) auto;
   align-items: center; gap: 16px; min-height: 72px;
@@ -63,8 +63,8 @@ svg { width: 100%; height: 100%; fill: currentColor; }
   padding: 11px 22px; border-radius: 999px; transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 .btn .ico { width: 18px; height: 18px; flex: 0 0 auto; }
-.btn-primary { background: var(--teal); color: #fff; box-shadow: 0 8px 20px rgba(16,156,143,.28); }
-.btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+.btn-primary { background: var(--teal); color: #fff; box-shadow: 0 8px 20px rgba(217,43,43,.28); }
+.btn-primary:hover { background: #b81f1f; transform: translateY(-2px); }
 .btn-lg { padding: 14px 28px; font-size: 1rem; }
 
 .burger { display: none; width: 44px; height: 40px; background: none; border: 0; cursor: pointer; padding: 8px; }
@@ -74,20 +74,20 @@ svg { width: 100%; height: 100%; fill: currentColor; }
 .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Hero */
-.hero { background: linear-gradient(180deg, #f7fcfd 0%, #ffffff 100%); overflow: hidden; }
+.hero { background: linear-gradient(180deg, #fdf5f6 0%, #ffffff 100%); overflow: hidden; }
 .hero-grid {
   display: grid; grid-template-columns: 1fr 1.15fr; align-items: center;
   gap: 40px; padding: 60px 20px 70px;
 }
 .pill {
-  display: inline-block; background: #e2f5f3; color: var(--teal-dark);
+  display: inline-block; background: #fde3e3; color: var(--teal-dark);
   font-size: .82rem; font-weight: 500; padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;
 }
 .hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.4rem); line-height: 1.14; color: var(--navy); font-weight: 800; letter-spacing: -.5px; }
 .hero p { color: var(--muted); margin: 18px 0 28px; max-width: 430px; }
 .hero-media img {
   width: 100%; border-radius: 18px; object-fit: cover; aspect-ratio: 16 / 11;
-  max-height: 500px; box-shadow: 0 24px 50px rgba(17,58,92,.14);
+  max-height: 500px; box-shadow: 0 24px 50px rgba(47,42,134,.14);
 }
 
 /* Sections */
@@ -108,7 +108,7 @@ svg { width: 100%; height: 100%; fill: currentColor; }
   padding: 30px 22px; text-align: center; box-shadow: var(--shadow);
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 18px 38px rgba(17,58,92,.12); }
+.card:hover { transform: translateY(-6px); box-shadow: 0 18px 38px rgba(47,42,134,.12); }
 .card .bubble {
   width: 62px; height: 62px; border-radius: 50%; background: var(--soft); color: var(--teal);
   display: grid; place-items: center; margin: 0 auto 16px; padding: 15px;
@@ -181,7 +181,7 @@ svg { width: 100%; height: 100%; fill: currentColor; }
   .nav {
     position: fixed; inset: 72px 0 auto 0; flex-direction: column; align-items: stretch;
     gap: 0; background: #fff; border-bottom: 1px solid var(--border);
-    padding: 8px 20px 20px; box-shadow: 0 18px 30px rgba(17,58,92,.1);
+    padding: 8px 20px 20px; box-shadow: 0 18px 30px rgba(47,42,134,.1);
     transform: translateY(-140%); transition: transform .3s ease; max-height: calc(100vh - 72px); overflow-y: auto;
   }
   .nav.open { transform: translateY(0); }
