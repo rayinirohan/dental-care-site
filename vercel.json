@@ -1,10 +1,11 @@
 {
   "buildCommand": "echo skip",
   "outputDirectory": "public/site",
-  "rewrites": [
+  "redirects": [
     {
       "source": "/:path*",
-      "destination": "/index.html"
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
